@@ -145,9 +145,9 @@ class MenuView extends StatelessWidget {
       children: [
         SizedBox(
           width: 200,
-          child: ValueListenableBuilder<MenuItem>(
+          child: ValueListenableBuilder(
             valueListenable: conductor.selectedMenuItem,
-            builder: (context, currentView, _) {
+            builder: (context, selectedMenuItem, _) {
               return ListView(
                 children: [
                   for (MenuItem view in MenuItem.values)
@@ -164,14 +164,14 @@ class MenuView extends StatelessWidget {
           ),
         ),
         Expanded(
-          child: ValueListenableBuilder<MenuItem>(
+          child: ValueListenableBuilder(
             valueListenable: conductor.selectedMenuItem,
-            builder: (context, currentView, _) {
+            builder: (context, selectedMenuItem, _) {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    conductor.getMenuTitle(currentView),
+                    conductor.getMenuTitle(selectedMenuItem),
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                   const SizedBox(height: 16),

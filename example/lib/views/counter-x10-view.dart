@@ -63,7 +63,7 @@ class CounterX10View extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder<int>(
+    return ValueListenableBuilder(
       valueListenable: conductor.counterX10,
       builder: (context, value, _) {
         return Row(

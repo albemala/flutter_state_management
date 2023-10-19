@@ -34,7 +34,7 @@ class AppView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder<ThemeMode>(
+    return ValueListenableBuilder(
       valueListenable: preferencesConductor.themeMode,
       builder: (context, themeMode, child) {
         return MaterialApp(

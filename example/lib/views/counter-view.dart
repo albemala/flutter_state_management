@@ -30,7 +30,7 @@ class CounterView extends StatelessWidget {
     return Row(
       children: [
         const Text('Count: '),
-        ValueListenableBuilder<int>(
+        ValueListenableBuilder(
           valueListenable: conductor.counter,
           builder: (context, value, _) {
             return Text('$value');

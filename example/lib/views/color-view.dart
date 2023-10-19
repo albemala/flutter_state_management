@@ -133,7 +133,7 @@ class ColorView extends StatelessWidget {
           onChanged: conductor.setB,
         ),
         const SizedBox(height: 16),
-        ValueListenableBuilder<Color>(
+        ValueListenableBuilder(
           valueListenable: conductor.color,
           builder: (context, colorValue, _) {
             return Container(
@@ -161,7 +161,7 @@ class _ColorChannelSliderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder<int>(
+    return ValueListenableBuilder(
       valueListenable: valueNotifier,
       builder: (context, value, _) {
         return Row(

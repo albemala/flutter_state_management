@@ -29,7 +29,7 @@ class PreferencesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        ValueListenableBuilder<ThemeMode>(
+        ValueListenableBuilder(
           valueListenable: conductor.themeMode,
           builder: (context, themeMode, _) {
             return Radio<ThemeMode>(
@@ -44,7 +44,7 @@ class PreferencesView extends StatelessWidget {
         ),
         const Text('Light'),
         const SizedBox(width: 8),
-        ValueListenableBuilder<ThemeMode>(
+        ValueListenableBuilder(
           valueListenable: conductor.themeMode,
           builder: (context, themeMode, _) {
             return Radio<ThemeMode>(

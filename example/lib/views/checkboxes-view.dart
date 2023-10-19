@@ -122,7 +122,7 @@ class CheckboxesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        ValueListenableBuilder<bool>(
+        ValueListenableBuilder(
           valueListenable: conductor.checked1,
           builder: (context, checked, _) {
             return Checkbox(
@@ -134,7 +134,7 @@ class CheckboxesView extends StatelessWidget {
             );
           },
         ),
-        ValueListenableBuilder<bool>(
+        ValueListenableBuilder(
           valueListenable: conductor.checked2,
           builder: (context, checked, _) {
             return Checkbox(
@@ -146,7 +146,7 @@ class CheckboxesView extends StatelessWidget {
             );
           },
         ),
-        ValueListenableBuilder<bool>(
+        ValueListenableBuilder(
           valueListenable: conductor.checked3,
           builder: (context, checked, _) {
             return Checkbox(
@@ -158,7 +158,7 @@ class CheckboxesView extends StatelessWidget {
             );
           },
         ),
-        ValueListenableBuilder<String>(
+        ValueListenableBuilder(
           valueListenable: conductor.checkboxesResult,
           builder: (context, checkboxesResult, _) {
             return Text(checkboxesResult);
