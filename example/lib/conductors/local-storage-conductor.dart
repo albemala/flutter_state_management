@@ -26,6 +26,7 @@ class LocalStorageConductor extends Conductor implements StorageConductor {
 
   @override
   Future<void> dispose() async {
+    isInitialized.dispose();
     await Hive.close();
   }
 
